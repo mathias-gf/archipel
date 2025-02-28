@@ -30,7 +30,7 @@ const projects = [
     image: "images/cbz3.png",
     link: "https://etulab.univ-amu.fr/g23008867/cb-reader",
     longDescription:
-      "Nous avons dû développé un logiciel en Java en utilisant une interface graphique Swing. Ce logiciel permet d'afficher des bandes dessinés et des mangas en chargeant des fichiers au format CBZ (Comic Book archive Zipped). Il est possibler de naviguer entre les pages de gauche à droite, comme dans un vrai livre, ou bien de lire en faisant défiler les pages vers le bas",
+      "Nous avons dû développer un logiciel en Java en utilisant une interface graphique Swing. Ce logiciel permet d'afficher des bandes dessinés et des mangas en chargeant des fichiers au format CBZ (Comic Book archive Zipped). Il est possibler de naviguer entre les pages de gauche à droite, comme dans un vrai livre, ou bien de lire en faisant défiler les pages vers le bas",
     gallery: ["images/cbz1.png", "images/cbz2.png", "images/cbz3.png"],
   },
   {
