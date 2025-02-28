@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mathias et Maël" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IUT Aix-Marseille Université site d'Arles - AMU</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link rel="icon" href="img/logo_iut.png" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-hover navbar-hover:hover"
+      id="fond_bleu"
+    >
+      <div class="container-fluid">
+        <a href="index.html"
+          ><img
+            class="img"
+            src="img/logo_blanc.png"
+            alt="le logo"
+            width="160px"
+            style="padding-right: 11px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent"
+          aria-controls="navbarContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="but.html">Présentation du BUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="site_arles.html"
+                >Présentation du site d'Arles</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jpo.html">Journées Portes Ouvertes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="glossaire.html">Glossaire</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="container mt-4 ecart centre">
+        <h1>Bienvenue sur la page concernant l'IUT</h1>
+        <p>
+          Passerelle entre étudiants et employeurs, l'IUT d'Aix-Marseille met
+          tout son potentiel de formation et ses équipements pédagogiques au
+          service des besoins des entreprises.
+        </p>
+      </div>
+
+      <div class="container">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel carousel slide ecart carousel-hover carousel-hover:hover"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <a href="but.html"
+                ><img
+                  src="img/accueil/arles.jpg"
+                  class="d-block w-100"
+                  alt="Le BUT d'Arles"
+              /></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>BUT d'Arles</h5>
+                <p>
+                  Présentation du Bachelor Universitaire de Technologie d'Arles
+                </p>
+              </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="2000">
+              <a href="site_arles.html"
+                ><img
+                  src="img/accueil/amphi.jpg"
+                  class="d-block w-100"
+                  alt="L'IUT d'Aix Marseille site d'Arles"
+              /></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>IUT Site d'Arles</h5>
+                <p>Présentation du site</p>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <a href="jpo.html"
+                ><img
+                  src="img/accueil/codage.jpg"
+                  class="d-block w-100"
+                  alt="Journées Portes Ouvertes"
+              /></a>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Journées Portes Ouvertes</h5>
+                <p>Aperçu des différentes journées portes ouvertes du BUT</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <footer class="text-center text-lg-start" id="fond_bleu">
+        <div class="container d-flex justify-content-center py-5">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-floating mx-2"
+            id="footer_icon"
+          >
+            <a
+              class="text-white"
+              href="https://www.snapchat.com/add/iut.am"
+              target="_blank"
+              title="instagram"
+            >
+              <i class="fab fa-snapchat"></i>
+            </a>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-floating mx-2"
+            id="footer_icon"
+          >
+            <a
+              class="text-white"
+              href="https://www.linkedin.com/school/iut-d'aix-marseille/?_l=fr_FR"
+              target="_blank"
+              title="instagram"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-floating mx-2"
+            id="footer_icon"
+          >
+            <a
+              class="text-white"
+              href="https://www.youtube.com/channel/UCWDTfF0ved1c_bChVrRjjog"
+              target="_blank"
+              title="instagram"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-floating mx-2"
+            id="footer_icon"
+          >
+            <a
+              class="text-white"
+              href="https://www.instagram.com/iutaixmars"
+              target="_blank"
+              title="instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-primary btn-lg btn-floating mx-2"
+            id="footer_icon"
+          >
+            <a
+              class="text-white"
+              href="https://twitter.com/IutAixMars?lang=fr"
+              target="_blank"
+              title="instagram"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </button>
+        </div>
+
+        <div class="text-center text-white p-3" id="footer">
+          &copy 2024 IUT-AMU site d'Arles
+          <a class="text-white" href="https://iut.univ-amu.fr/"
+            >iut.univ-amu.fr</a
+          >
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

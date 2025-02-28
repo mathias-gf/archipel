@@ -1,0 +1,32 @@
+.ecart {
+    padding-bottom: 10%;
+}
+
+.centre {
+    text-align: center;
+}
+
+#fond_bleu {
+    background-color: #00558b;
+}
+
+#footer {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#footer_icon {
+    background-color: #faad3c;
+}
+
+.carousel-hover {
+    filter: brightness(100%);
+    transition: filter 0.3s ease;
+}
+
+.carousel-hover:hover {
+    filter: brightness(85%);
+}
+
+img {
+    border-radius: 50px;
+}
