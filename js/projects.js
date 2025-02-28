@@ -51,7 +51,7 @@ const techLogos = {
   HTML: "images/logos/html.png",
   CSS: "images/logos/css.png",
   JavaScript: "images/logos/javascript.png",
-  Bootstrap: "images/logos/bootstrap_logo.svg",
+  Bootstrap: "images/logos/Bootstrap_logo.png",
   Webpack: "images/logos/webpack.svg",
   APIFetch: "images/logos/api.png",
   "Node.js": "images/logos/nodejs.png",
