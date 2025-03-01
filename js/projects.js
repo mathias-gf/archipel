@@ -6,7 +6,7 @@ const projects = [
       "Site Web présentant l'IUT à des lycéens/futurs bacheliers réalisé dans le cadre d'une SaÉ. Nous étions chargé de présenter le BUT en général, les compétences ainsi que les métiers auquel prépapre la formation tout en respectant la norme W3C et la charte graphique de l'université d'AMU",
     technologies: ["HTML", "CSS", "Bootstrap"],
     image: "images/logo_iut.png",
-    link: "../portfolio/site/index.html",
+    link: "../archipel/site/",
     longDescription:
       "Ce projet a été réalisé durant le premier semestre de ma formation. L'objectif était de créer un site informatif et attractif pour présenter le BUT Informatique aux futurs étudiants. Nous avons travaillé en équipe de 4 personnes, en utilisant la méthodologie agile pour organiser notre travail. Le site respecte les standards du web (W3C) et la charte graphique d'Aix-Marseille Université.",
     gallery: ["images/sae1.png", "images/sae2.png", "images/sae3.png"],
