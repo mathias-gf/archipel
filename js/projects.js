@@ -17,7 +17,7 @@ const projects = [
       "Application web réalisée en javascript avec une configuration webpack",
     technologies: ["HTML", "CSS", "JavaScript", "Webpack", "APIFetch"],
     image: "images/logo_glossary.png",
-    link: "https://xeli0s.github.io/botw_glossary/dist/index.html",
+    link: "https://mathias-gf.github.io/botw_glossary/dist/index.html",
     longDescription:
       "Cette application web est un glossaire sur l'univers de Zelda. Développée avec JavaScript et configurée avec Webpack. J'ai utilisé l'API Fetch pour récupérer les données depuis une API publique sur Zelda, permettant ainsi de présenter une encyclopédie complète des animaux, équipements, matériaux et monstres du jeu.",
     gallery: ["images/zelda1.png", "images/zelda2.png", "images/zelda3.png"],
