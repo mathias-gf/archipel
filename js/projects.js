@@ -26,7 +26,7 @@ const projects = [
     title: "Projet Java - CBZ Reader",
     description:
       "Application Java servant à lire des Bandes Dessinées ou des Mangas au format cbz",
-    technologies: ["Java"],
+    technologies: ["Java", "Git"],
     image: "images/cbz3.png",
     link: "https://etulab.univ-amu.fr/g23008867/cb-reader",
     longDescription:
@@ -37,7 +37,15 @@ const projects = [
     title: "SaÉ - Le Royaume des Lettres",
     description:
       "Application Web permettant d'aider à l'apprentissage de la lecture des enfants rentrant à l'école primaire",
-    technologies: ["HTML", "CSS", "JavaScript", "Webpack", "Node.js"],
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Webpack",
+      "Node.js",
+      "Git",
+      "Trello",
+    ],
     image: "images/logo_rdl.png",
     link: "https://tinyurl.com/RoyaumeDesLettres",
     longDescription:
@@ -56,11 +64,84 @@ const techLogos = {
   APIFetch: "images/logos/api.png",
   "Node.js": "images/logos/nodejs.png",
   Java: "images/logos/java.png",
+  Git: "images/logos/git.png",
+  Trello: "images/logos/trello.png",
 };
 
 // Fonction pour créer les cartes de projets
 function createProjectCards() {
   const projectsGrid = document.querySelector(".projects-grid");
+
+  // Créer le conteneur du carrousel d'images
+  const imageCarouselContainer = document.createElement("div");
+  imageCarouselContainer.className = "image-carousel-container";
+  imageCarouselContainer.innerHTML = `
+    <div class="image-carousel">
+      <button class="carousel-close">
+        <span class="close-circle">&times;</span>
+      </button>
+      <button class="carousel-prev">&lt;</button>
+      <img src="" alt="Projet" class="carousel-image">
+      <button class="carousel-next">&gt;</button>
+    </div>
+  `;
+  document.body.appendChild(imageCarouselContainer);
+
+  let currentCarouselImages = [];
+  let currentImageIndex = 0;
+
+  // Fonction pour ouvrir le carrousel
+  function openCarousel(images, startIndex) {
+    currentCarouselImages = images;
+    currentImageIndex = startIndex;
+    updateCarouselImage();
+    imageCarouselContainer.classList.add("active");
+  }
+
+  // Mettre à jour l'image du carrousel
+  function updateCarouselImage() {
+    const carouselImage = document.querySelector(".carousel-image");
+    carouselImage.src = currentCarouselImages[currentImageIndex];
+
+    // Gestion des boutons prev/next avec rotation circulaire
+    document.querySelector(".carousel-prev").style.display =
+      currentCarouselImages.length > 1 ? "block" : "none";
+    document.querySelector(".carousel-next").style.display =
+      currentCarouselImages.length > 1 ? "block" : "none";
+  }
+
+  // Événement pour fermer le carrousel
+  document
+    .querySelector(".carousel-close")
+    .addEventListener("click", function () {
+      imageCarouselContainer.classList.remove("active");
+    });
+
+  // Événement pour image suivante avec rotation circulaire
+  document
+    .querySelector(".carousel-next")
+    .addEventListener("click", function () {
+      currentImageIndex =
+        (currentImageIndex + 1) % currentCarouselImages.length;
+      updateCarouselImage();
+    });
+
+  // Événement pour image précédente avec rotation circulaire
+  document
+    .querySelector(".carousel-prev")
+    .addEventListener("click", function () {
+      currentImageIndex =
+        (currentImageIndex - 1 + currentCarouselImages.length) %
+        currentCarouselImages.length;
+      updateCarouselImage();
+    });
+
+  // Fermer le carrousel en cliquant à l'extérieur
+  imageCarouselContainer.addEventListener("click", function (e) {
+    if (e.target === this) {
+      this.classList.remove("active");
+    }
+  });
 
   projects.forEach((project, index) => {
     const card = document.createElement("div");
@@ -89,6 +170,14 @@ function createProjectCards() {
         <button class="view-details-btn" data-project="${index}">Voir les détails</button>
       </div>
     `;
+
+    // Ajouter l'événement de clic sur la carte entière
+    card.addEventListener("click", function (e) {
+      // Éviter de déclencher l'événement si le bouton "Voir les détails" est cliqué
+      if (!e.target.classList.contains("view-details-btn")) {
+        this.querySelector(".view-details-btn").click();
+      }
+    });
 
     projectsGrid.appendChild(card);
   });
@@ -140,10 +229,13 @@ function createProjectCards() {
       galleryContainer.innerHTML = "";
 
       if (project.gallery && project.gallery.length) {
-        project.gallery.forEach((img) => {
+        project.gallery.forEach((img, index) => {
           const imgElement = document.createElement("img");
           imgElement.src = img;
           imgElement.alt = project.title;
+          imgElement.addEventListener("click", () => {
+            openCarousel(project.gallery, index);
+          });
           galleryContainer.appendChild(imgElement);
         });
       } else {
@@ -151,6 +243,9 @@ function createProjectCards() {
         const imgElement = document.createElement("img");
         imgElement.src = project.image;
         imgElement.alt = project.title;
+        imgElement.addEventListener("click", () => {
+          openCarousel([project.image], 0);
+        });
         galleryContainer.appendChild(imgElement);
       }
 

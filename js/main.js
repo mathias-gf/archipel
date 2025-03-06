@@ -34,24 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("section").forEach((section) => {
     observer.observe(section);
   });
-
-  // Formulaire de contact
-  const contactForm = document.getElementById("contact-form");
-
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Récupérer les données du formulaire
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-
-    // Ici, vous pouvez ajouter le code pour envoyer les données à votre backend
-    console.log("Données du formulaire:", data);
-
-    // Réinitialiser le formulaire
-    contactForm.reset();
-    alert("Message envoyé avec succès!");
-  });
 });
 
 document

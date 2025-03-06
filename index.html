@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/popup.css" />
+    <link rel="stylesheet" href="css/carrousel.css" />
   </head>
   <body>
     <header>
@@ -52,9 +53,10 @@
       </section>
 
       <section id="apropos" class="about">
-        <h2>À propos de moi</h2>
         <div class="about-content">
           <div class="about-text">
+            <h2>À propos de moi</h2>
+            <br />
             <p>
               👋 Plop, moi c'est Mathias ! Je suis en deuxième année de BUT
               Informatique. Passionné d'informatique, j'ai découvert le codage
@@ -70,15 +72,22 @@
             </p>
           </div>
           <div class="skills">
-            <h3>Compétences</h3>
+            <h2>Mes compétences</h2>
+            <br />
             <ul class="skills-list">
-              <li>C++</li>
-              <li>HTML/CSS</li>
-              <li>JavaScript</li>
-              <li>Node.js</li>
-              <li>Java</li>
-              <li>PostgresSQL</li>
-              <li>React</li>
+              <li data-skill="html">HTML</li>
+              <li data-skill="css">CSS</li>
+              <li data-skill="c++">C++</li>
+              <li data-skill="vscode">Visual Studio Code</li>
+              <li data-skill="javascript">JavaScript</li>
+              <li data-skill="webpack">Webpack</li>
+              <li data-skill="postgresql">PostgreSQL</li>
+              <li data-skill="react">React</li>
+              <li data-skill="vite">Vite js</li>
+              <li data-skill="angular">Angular</li>
+              <li data-skill="IntelliJ_IDEA">IntelliJ_IDEA</li>
+              <li data-skill="java">Java</li>
+              <li data-skill="gradle">Gradle</li>
             </ul>
           </div>
         </div>
@@ -117,5 +126,43 @@
 
     <script src="js/projects.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/skills.js"></script>
+
+    <!-- EmailJS SDK -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!-- Votre script pour le formulaire -->
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialiser EmailJS avec votre User ID public (trouvé dans Integration sur votre dashboard)
+        emailjs.init("MQg06d0_5J2xSrten");
+
+        const contactForm = document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Paramètres pour l'envoi d'email
+          const serviceID = "service_8sogqvs"; // ID du service email que vous avez configuré
+          const templateID = "template_1mzh0ms"; // ID du modèle d'email que vous avez créé
+
+          // Envoi de l'email via EmailJS
+          emailjs.sendForm(serviceID, templateID, this).then(
+            function () {
+              console.log("Email envoyé avec succès!");
+              contactForm.reset();
+              alert("Message envoyé avec succès!");
+            },
+            function (error) {
+              console.error("Erreur lors de l'envoi:", error);
+              alert("Une erreur s'est produite. Veuillez réessayer plus tard.");
+            }
+          );
+        });
+      });
+    </script>
   </body>
 </html>
