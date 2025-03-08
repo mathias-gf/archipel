@@ -3,7 +3,7 @@ const projects = [
   {
     title: "SaÉ S1.05 - Recueil de Besoins",
     description:
-      "Site Web présentant l'IUT à des lycéens/futurs bacheliers réalisé dans le cadre d'une SaÉ. Nous étions chargé de présenter le BUT en général, les compétences ainsi que les métiers auquel prépapre la formation tout en respectant la norme W3C et la charte graphique de l'université d'AMU",
+      "Site Web présentant l'IUT à des lycéens/futurs bacheliers, réalisé dans le cadre d'une SaÉ (Situation d'Apprentissage Évalué). Nous étions chargés de présenter le BUT en général, les compétences ainsi que les métiers auquel prépare la formation, tout en respectant la norme W3C et la charte graphique de l'université d'Aix-Marseille.",
     technologies: ["HTML", "CSS", "Bootstrap"],
     image: "images/logo_iut.png",
     link: "../site/",
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Projet Webpack - Glossaire Zelda",
     description:
-      "Application web réalisée en javascript avec une configuration webpack",
+      "Application web réalisée en javascript avec une configuration webpack.",
     technologies: ["HTML", "CSS", "JavaScript", "Webpack", "APIFetch"],
     image: "images/logo_glossary.png",
     link: "https://mathias-gf.github.io/botw_glossary/dist/index.html",
@@ -27,16 +27,16 @@ const projects = [
     description:
       "Application Java servant à lire des Bandes Dessinées ou des Mangas au format cbz",
     technologies: ["Java", "Git"],
-    image: "images/cbz3.png",
+    image: "images/logo_cbz.png",
     link: "https://etulab.univ-amu.fr/g23008867/cb-reader",
     longDescription:
-      "Nous avons dû développer un logiciel en Java en utilisant une interface graphique Swing. Ce logiciel permet d'afficher des bandes dessinés et des mangas en chargeant des fichiers au format CBZ (Comic Book archive Zipped). Il est possibler de naviguer entre les pages de gauche à droite, comme dans un vrai livre, ou bien de lire en faisant défiler les pages vers le bas",
+      "Nous avons dû développer un logiciel en Java en utilisant une interface graphique Swing. Ce logiciel permet d'afficher des bandes dessinées et des mangas en chargeant des fichiers au format CBZ (Comic Book archive Zipped). Il est possible de naviguer entre les pages de gauche à droite, comme dans un vrai livre, ou bien de lire en faisant défiler les pages vers le bas.",
     gallery: ["images/cbz1.png", "images/cbz2.png", "images/cbz3.png"],
   },
   {
     title: "SaÉ - Le Royaume des Lettres",
     description:
-      "Application Web permettant d'aider à l'apprentissage de la lecture des enfants rentrant à l'école primaire",
+      "Application Web permettant d'aider à l'apprentissage de la lecture des enfants entrant à l'école primaire",
     technologies: [
       "HTML",
       "CSS",

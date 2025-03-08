@@ -168,6 +168,12 @@
   background: #f8f9fa;
 }
 
+.project-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
