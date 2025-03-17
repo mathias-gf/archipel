@@ -34,7 +34,7 @@ const projects = [
     gallery: ["images/cbz1.png", "images/cbz2.png", "images/cbz3.png"],
   },
   {
-    title: "SaÉ - Le Royaume des Lettres",
+    title: "SaÉ S3.01 - Le Royaume des Lettres",
     description:
       "Application Web permettant d'aider à l'apprentissage de la lecture des enfants entrant à l'école primaire",
     technologies: [
@@ -52,6 +52,16 @@ const projects = [
       "Dans le cadre de cette SaÉ, nous avons développé une application web en équipe Scrum, avec une approche agile. Le but de cette application est d'aider à l'apprentissage de la lecture des enfants rentrant à l'école primaire. Nous avons proposé sur cette application des exercices et mini-jeux ludiques afin de rendre l'apprentissage de l'enfant plus plaisant. Le parent a accès à une page où il peut voir les progrès de son enfant.",
     gallery: ["images/rdl1.png", "images/rdl2.png", "images/rdl3.png"],
   },
+  {
+    title: "Projet React - MemoRoyale",
+    description: "Jeu de Memory codé en React ",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Vite"],
+    image: "images/memoroyale.png",
+    link: "https://memo-royale.vercel.app/",
+    longDescription:
+      "Afin d'attester mes connaissances en react, j'ai dû développer une application web, en react, sur le thème d'un jeu de memory.",
+    gallery: ["images/memo1.png", "images/memo2.png", "images/memo3.png"],
+  },
 ];
 
 // Mapping des technologies avec leurs logos
@@ -66,6 +76,8 @@ const techLogos = {
   Java: "images/logos/java.png",
   Git: "images/logos/git.png",
   Trello: "images/logos/trello.png",
+  Vite: "images/logos/vite.png",
+  React: "images/logos/react.png",
 };
 
 // Fonction pour créer les cartes de projets
