@@ -20,6 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     vite: "images/logos/vite.png",
     webpack: "images/logos/webpack.svg",
     vscode: "images/logos/vscode.png",
+    laravel: "images/logos/laravel.png",
+    vercel: "images/logos/vercel.svg",
+    bootstrap: "images/logos/bootstrap.png",
   };
 
   const skillsList = document.querySelector(".skills-list");
