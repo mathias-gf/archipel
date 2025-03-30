@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
     laravel: "images/logos/laravel.png",
     vercel: "images/logos/vercel.svg",
     bootstrap: "images/logos/bootstrap.png",
+    ionic: "images/logos/ionic.png",
+    github: "images/logos/github.png",
   };
 
   const skillsList = document.querySelector(".skills-list");
